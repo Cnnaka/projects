@@ -27,16 +27,20 @@ mv .env.example .env
 #generate key
 php artisan key:generate
 
+cd /var/wwww/html
+nano .env
+
 #disable apache site
 a2dissite 000-default.conf
-cd /etc/apache2/sites-available
-
+cd /etc/apache2/sites-available/laravel.conf
 
 #create .conf file
 sudo touch laravel.conf
 sudo a2ensite laravel
 sudo mkdir -p /var/www/laravel
 cd /var/www/laravel
+cp .env.example .env
+
 sudo chown -R vagrant:www-data /var/www/laravel/
 sudo find /var/www/laravel/ -type f -exec chmod 664 {} \;
 sudo find /var/www/laravel/ -type d -exec chmod 775 {} \;
