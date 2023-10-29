@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
  # config.vm.define "slave_1" do |slave_1|
 
   #  slave_1.vm.hostname = "slave-1"
-   # slave_1.vm.box = "ubuntu/jammy64"
+   #nano slave_1.vm.box = "ubuntu/jammy64"
    # slave_1.vm.network "private_network", ip: "192.168.20.14"
 
    # slave_1.vm.provision "shell", inline: <<-SHELL
